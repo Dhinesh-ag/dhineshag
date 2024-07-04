@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: linear-gradient(to bottom right, #fc5185, #f5f500);
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #f6f6f6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    height: 100px;
+    color: #333;
+}
+
+.cell:hover {
+    background-color: #7fbfff;
+}
+
+.restart-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+    background-color: #45a049;
+}
+
+.message {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #555;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.winner-message {
+    font-size: 1.8em;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.congrats {
+    background-color: #ffec51;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cell {
+        font-size: 2em;
+        height: 80px;
+    }
+
+    .restart-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
